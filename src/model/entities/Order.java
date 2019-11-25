@@ -21,6 +21,7 @@ private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
+
 	}
 
 	public Date getMoment() {
@@ -74,7 +75,7 @@ private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:
 		sb.append(sdf.format(moment) + "\n");
 		sb.append("Order status: ");
 		sb.append(status + "\n");
-		sb.append("Client: ");
+		sb.append("Client:" + "\n");
 		sb.append(client + "\n");
 		sb.append("Order items:\n");
 		for (OrderItem item : items) {

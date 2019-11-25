@@ -25,10 +25,18 @@ public class Program {
 		String name = sc.nextLine();
 		System.out.print("Email: ");
 		String email = sc.next();
+		System.out.print("Address: ");
+		String address = sc.next();
+		System.out.print("Number: ");
+		Integer number = sc.nextInt();
+		System.out.print("Code: ");
+		Integer code = sc.nextInt();
+		System.out.print("Phone: ");
+		Integer phone = sc.nextInt();
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		Date birthDate = sdf.parse(sc.next());
 		
-		Client client = new Client(name, email, birthDate);
+		Client client = new Client(name, email, birthDate, address, number, code, phone);
 		
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");
