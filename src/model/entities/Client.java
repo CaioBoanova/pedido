@@ -8,21 +8,31 @@ public class Client {
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 	private String name;
+	private String cpf;
 	private String email;
 	private String address;
 	private Integer number;
 	private Integer code;
-	private Integer phone;
+	private String phone;
 	private Date birthDate;
 	
-	public Client(String name, String email, Date birthDate, String address, Integer number, Integer code, Integer phone) {
+	public Client(String name, String email, Date birthDate, String address, Integer number, Integer code, String phone, String cpf) {
 		this.name = name;
+		this.cpf = cpf;
 		this.email = email;
 		this.address = address;
 		this.number = number;
 		this.code = code;
 		this.phone = phone;
 		this.birthDate = birthDate;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public Integer getCode() {
@@ -57,11 +67,11 @@ public class Client {
 		this.email = email;
 	}
 	
-	public Integer getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	
@@ -84,7 +94,7 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return name + " (" + sdf.format(birthDate) + ") - " + "\n" + address + " - " + number + "\n" + code + "\n" + phone + "\n" +  email;
+		return name + "\n" + cpf +" (" + sdf.format(birthDate) + ") - " + "\n" + address + " - " + number + "\n" + code + "\n" + phone + "\n" +  email;
 	}
 
 
